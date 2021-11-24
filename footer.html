@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <!--Amazon Favicon-->
+  <link rel="icon" href="img/amazon_favicon.ico" image="image/gif" size="16x16">
+
+
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+  <!--font awesome css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--Bootsrap css local-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!--Drawer css file-->
+  <link rel="stylesheet" href="css/bootstrap-drawer.min.css">
+
+  <!--Custom css-->
+  <link rel="stylesheet" href="css/custom.css">
+  <title>Amazon : Footer</title>
+</head>
+
+<body>
+  <!--Navbar start-->
+  <nav id="pageTop" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!--Drawer starts-->
+    <button class="btn btn-outline-light" data-toggle="drawer" data-target="#amazondrawer">
+      <i class="fas fa-sliders-h"></i>
+  </button>
+
+  <div class="drawer drawer-left slide" tabindex="-1" role="dialog" aria-labelledby="drawer-demo-title"
+      aria-hidden="true" id="amazondrawer">
+      <div class="drawer-content drawer-content-scrollable" role="document">
+          <div class="drawer-header bg-dark text-white">
+              <h4 class="drawer-title mx-auto" id="drawer-demo-title"><i class="far fa-user-circle"></i> Hello,
+                  Sign in</h4>
+          </div>
+          <div class="drawer-body">
+              <h6 class="text-muted text-uppercase">Help & Settings</h6>
+              <a href="#" class="btn btn-outline-success my-2 btn-sm">Your Account</a>
+              <a href="login.html" class="btn btn-warning my-2 btn-sm">Sign in</a>
+          </div>
+          <div class="drawer-footer">
+              <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="drawer"
+                  aria-label="close">
+                  <i class="fas fa-2x fa-times"></i>
+
+              </button>
+          </div>
+      </div>
+  </div>
+  <!--Drawer ends-->
+    
+    <a class="navbar-brand pl-3" href="#">
+      <img src="img/amzon_logo_white.png" height="30" width="100" alt="Amazon_logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!--search bar start-->
+      <form class="form-inline px-lg-5" novalidate method="get">
+        <div class="input-group">
+          <div class="input-group-prepand">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" name="btnCategory" type="button"
+                id="btnCategoryDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All
+              </button>
+              <div class="dropdown-menu" aria-labelledby="btnCategoryDropdownMenu">
+                <a class="dropdown-item" href="#">All</a>
+                <a class="dropdown-item" href="#">Smartphones</a>
+                <a class="dropdown-item" href="#">Electronics</a>
+                <a class="dropdown-item" href="#">Kichen Hardware</a>
+                <a class="dropdown-item" href="#">Books</a>
+              </div>
+            </div>
+          </div>
+          <input type="text" class="form-control" size="80" name="query" id="query">
+          <input type="text" name="category" id="category" hidden>
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-warning">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+      <!--search bar ends-->
+      <ul class="navbar-nav">
+        <!--preferred language start-->
+        <li class="nav-item dropdown px-2">
+          <a class="nav-link " href="#" id="prefLanguageDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-2x fa-language"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="prefLanguageDropdown">
+            <form class="p-3">
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" name="prefLanguage" id="englishlang" value="english"
+                  checked>
+                <label class="custom-control-label" for="englishlang">
+                  English
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" name="prefLanguage" id="hindilang" value="hindi"
+                  checked>
+                <label class="custom-control-label" for="hindilang">
+                  Hindi
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" name="prefLanguage" id="banglalang" value="bangla"
+                  checked>
+                <label class="custom-control-label" for="banglalang">
+                  Bangla
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" name="prefLanguage" id="urdulang" value="urdu" checked>
+                <label class="custom-control-label" for="urdulang">
+                  Urdu
+                </label>
+              </div>
+            </form>
+          </div>
+        </li>
+        <!--preferred language ends-->
+        <!--user account start-->
+        <li class="nav-item dropdown px-2">
+          <a class="nav-link " href="login.html" id="userAccount" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas text-success fa-2x fa-user-circle"></i>
+          </a>
+          <div class="dropdown-menu px-3" aria-labelledby="userAccount">
+            <div class="d-flex flex-column justify-content-center">
+              <a href="#" class="btn btn-warning w-75 font-weight-bold">Sign in</a>
+              <small class="text-muted">New Customer? <a href="#">Start here.</a></small>
+            </div>
+          </div>
+        </li>
+        <!--user account ends-->
+        <!--Shopping carts start-->
+        <li class="nav-item px-2">
+          <a class="nav-link" href="#" aria-disabled="true">
+            <i class="fas fa-3x text-light fa-shopping-cart"></i>
+            <span class="badge badge-warning badge badge-pill">0</span>
+          </a>
+        </li>
+        <!--Shopping carts ends-->
+      </ul>
+
+    </div>
+  </nav>
+  <!--Navbar Ends-->
+  
+  <div class="container-fluid px-0">
+    <!--Image slider starts-->
+    <div id="amazonImageSlider" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="#"><img src="..." class="d-block w-100" alt="slide1"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="#"><img src="..." class="d-block w-100" alt="slide2"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="#"><img src="..." class="d-block w-100" alt="slide3"></a>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#amazonImageSlider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#amazonImageSlider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!--Image slider ends-->
+
+    <div class="container mb-5" style="margin-top: -50px;"><!--200 tak dena hai slider img lagaaa ne ke baad-->
+     <!--Product Row starts-->
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="card my-2 my-lg-0">
+            <div class="card-body d-flex justify-content-center">
+             <a href="#"><img src="img/Product3.png" alt="Product3" class="img-fluid" ></a>
+            </div>
+            <div class="card-footer bg-transparent py-0">
+              <div class="row my-1">
+                <div class="col-md-6">
+                  <p class="font-weight-bold text-danger">
+                    <i class="fas fa-rupee-sign"></i> 20000.00
+                   </p>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="btn btn-success btn-sm btn-block">Buy</a>
+                </div>
+              </div>
+             </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card my-2 my-lg-0">
+            <div class="card-body d-flex justify-content-center">
+              <a href="#"></a><img src="img/Product3.png" alt="Product3" class="img-fluid" ></a>
+            </div>
+            <div class="card-footer bg-transparent py-0">
+              <div class="row my-1">
+                <div class="col-md-6">
+                  <p class="font-weight-bold text-danger">
+                    <i class="fas fa-rupee-sign"></i> 12000.00
+                   </p>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="btn btn-success btn-sm btn-block">Buy</a>
+                </div>
+              </div>
+             </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card my-2 my-lg-0">
+            <div class="card-body d-flex justify-content-center">
+              <a href="#"></a><img src="img/Product3.png" alt="Product3" class="img-fluid" ></a>
+            </div>
+            <div class="card-footer bg-transparent py-0">
+              <div class="row my-1">
+                <div class="col-md-6">
+                  <p class="font-weight-bold text-danger">
+                    <i class="fas fa-rupee-sign"></i> 10000.00
+                   </p>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="btn btn-success btn-sm btn-block">Buy</a>
+                </div>
+              </div>
+             </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card my-2 my-lg-0">
+            <div class="card-body d-flex justify-content-center">
+              <a href="#"></a><img src="img/Product3.png" alt="Product3" class="img-fluid" ></a>
+            </div>
+            <div class="card-footer bg-transparent py-0">
+              <div class="row my-1">
+                <div class="col-md-6">
+                  <p class="font-weight-bold text-danger">
+                    <i class="fas fa-rupee-sign"></i> 15000.00
+                   </p>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="btn btn-success btn-sm btn-block">Buy</a>
+                </div>
+              </div>
+             </div>
+          </div>
+        </div>
+     </div>
+     <!--Product Row ends-->
+
+
+     <!--Product Row starts-->
+     <div class="row mt-md-3 mt-0">
+      <div class="col-lg-3">
+        <div class="card my-2 my-lg-0">
+          <div class="card-body d-flex justify-content-center">
+           <a href="#"><img src="img/Product3.png" alt="Product3" class="img-fluid" ></a>
+          </div>
+          <div class="card-footer bg-transparent py-0">
+            <div class="row my-1">
+              <div class="col-md-6">
+                <p class="font-weight-bold text-danger">
+                  <i class="fas fa-rupee-sign"></i> 20000.00
+                 </p>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="btn btn-success btn-sm btn-block">Buy</a>
+              </div>
+            </div>
+           </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="card my-2 my-lg-0">
+          <div class="card-body d-flex justify-content-center">
+            <a href="#"></a><img src="img/Product3.png" alt="Product3" class="img-fluid" ></a>
+          </div>
+          <div class="card-footer bg-transparent py-0">
+            <div class="row my-1">
+              <div class="col-md-6">
+                <p class="font-weight-bold text-danger">
+                  <i class="fas fa-rupee-sign"></i> 12000.00
+                 </p>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="btn btn-success btn-sm btn-block">Buy</a>
+              </div>
+            </div>
+           </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="card my-2 my-lg-0">
+          <div class="card-body d-flex justify-content-center">
+            <a href="#"></a><img src="img/Product3.png" alt="Product3" class="img-fluid" ></a>
+          </div>
+          <div class="card-footer bg-transparent py-0">
+            <div class="row my-1">
+              <div class="col-md-6">
+                <p class="font-weight-bold text-danger">
+                  <i class="fas fa-rupee-sign"></i> 10000.00
+                 </p>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="btn btn-success btn-sm btn-block">Buy</a>
+              </div>
+            </div>
+           </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="card my-2 my-lg-0">
+          <div class="card-body d-flex justify-content-center">
+            <a href="#"></a><img src="img/Product3.png" alt="Product3" class="img-fluid" ></a>
+          </div>
+          <div class="card-footer bg-transparent py-0">
+            <div class="row my-1">
+              <div class="col-md-6">
+                <p class="font-weight-bold text-danger">
+                  <i class="fas fa-rupee-sign"></i> 15000.00
+                 </p>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="btn btn-success btn-sm btn-block">Buy</a>
+              </div>
+            </div>
+           </div>
+        </div>
+      </div>
+   </div>
+   <!--Product Row ends-->
+    </div>
+  </div>
+
+  <!--Footer Creation Starts-->
+    <div class="container-fluid bg-dark px-0">
+        <a href="#pageTop" class="btn btn-dark btn-block mb-5">Back to Top</a>
+        
+        <div class="container">
+         <div class="row text-white mb-5">
+             <div class="col-md-3">
+                <h5>Get To Know Us</h5>
+                <a href="#" class="text-white">About</a> <br />
+                <a href="#" class="text-white">Carrers</a> <br />
+                <a href="#" class="text-white">Press Release</a> <br />
+                <a href="#" class="text-white">Investment</a> <br />
+                <a href="#" class="text-white">Offers</a> <br />
+             </div>
+
+             <div class="col-md-3">
+                <h5>Connect With Us</h5>
+                <a href="#" class="text-white">Facebook</a> <br />
+                <a href="#" class="text-white">Twitter</a> <br />
+                <a href="#" class="text-white">Instragram</a> <br />
+
+            </div>
+
+            <div class="col-md-3">
+                <h5>Make Money With Us</h5>
+                <a href="#" class="text-white">Sell on Amazon</a> <br />
+                <a href="#" class="text-white">Sell under Amazon Accelerator</a> <br />
+                <a href="#" class="text-white">Become an Affiliate Marketing</a> <br />
+                <a href="#" class="text-white">Fulfillment by Amazon</a> <br />
+                <a href="#" class="text-white">Advertise your Products</a> <br />
+                <a href="#" class="text-white">Amazon Pay on Merchants</a> <br />
+            </div>
+
+            <div class="col-md-3">
+                <h5>Let Us Help You</h5>
+                <a href="#" class="text-white">Covid-19 and Amazon</a> <br />
+                <a href="#" class="text-white">Your Account</a> <br />
+                <a href="#" class="text-white">Returns Center</a> <br />
+                <a href="#" class="text-white">100% Purchase Protection</a> <br />
+                <a href="#" class="text-white">Amazon App Download</a> <br />
+                <a href="#" class="text-white">Amazon Assistant Download</a> <br />
+                <a href="#" class="text-white">Help</a> <br />
+            </div>
+         </div>
+        </div>
+        <div class="dropdown-divider mt-3"></div>
+        <div class="row mt-3 mx-0 px-0">
+            <div class="col-md-12 text-center">
+                <img src="img/amzon_logo_white.png" width="100" height="30" alt="amazon logo footer" srcset="">
+            </div>
+        </div>
+
+        <!--Sub footer starts-->
+        <div class="mt-3 py-3" style="background-color: #131a22; font-size: 10px;">
+           <div class="container">
+
+            <div class="row text-white">
+                <div class="col-md-3">
+                   <p>Get To Know Us</p>
+                   <a href="#" class="text-white">About</a> <br />
+                   <a href="#" class="text-white">Carrers</a> <br />
+                   <a href="#" class="text-white">Press Release</a> <br />
+                   <a href="#" class="text-white">Investment</a> <br />
+                   <a href="#" class="text-white">Offers</a> <br />
+                </div>
+   
+                <div class="col-md-3">
+                   <p>Connect With Us</p>
+                   <a href="#" class="text-white">Facebook</a> <br />
+                   <a href="#" class="text-white">Twitter</a> <br />
+                   <a href="#" class="text-white">Instragram</a> <br />
+   
+               </div>
+   
+               <div class="col-md-3">
+                   <p>Make Money With Us</p>
+                   <a href="#" class="text-white">Sell on Amazon</a> <br />
+                   <a href="#" class="text-white">Sell under Amazon Accelerator</a> <br />
+                   <a href="#" class="text-white">Become an Affiliate Marketing</a> <br />
+                   <a href="#" class="text-white">Fulfillment by Amazon</a> <br />
+                   <a href="#" class="text-white">Advertise your Products</a> <br />
+                   <a href="#" class="text-white">Amazon Pay on Merchants</a> <br />
+               </div>
+   
+               <div class="col-md-3">
+                   <p>Let Us Help You</p>
+                   <a href="#" class="text-white">Covid-19 and Amazon</a> <br />
+                   <a href="#" class="text-white">Your Account</a> <br />
+                   <a href="#" class="text-white">Returns Center</a> <br />
+                   <a href="#" class="text-white">100% Purchase Protection</a> <br />
+                   <a href="#" class="text-white">Amazon App Download</a> <br />
+                   <a href="#" class="text-white">Amazon Assistant Download</a> <br />
+                   <a href="#" class="text-white">Help</a> <br />
+               </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-md-12 text-center text-white">
+                    <p>
+                        <i class="far fa-copyright"></i>
+                        1996-2021, Amazon.com Inc.
+                    </p>
+                </div>
+            </div>
+
+           </div> 
+        </div>
+        <!--Sub footer ends-->
+    </div>
+
+  <!--Footer Creation ends-->
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!--Drawer js file-->
+  <script src="js/bootstrap-drawer.min.js"></script>
+  <!--Custom javascript-->
+  <script src="js/custom.js"></script>
+</body>
+
+</html>

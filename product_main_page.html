@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!--Amazon Favicon-->
+    <link rel="icon" href="img/amazon_favicon.ico" image="image/gif" size="16x16">
+
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+    <!--font awesome css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Bootsrap css local-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--Drawer css file-->
+    <link rel="stylesheet" href="css/bootstrap-drawer.min.css">
+
+    <!--Custom css-->
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Amazon : Product Page</title>
+</head>
+
+<body>
+    <!--Navbar start-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+       <!--Drawer start-->
+       <button class="btn btn-outline-light" data-toggle="drawer" data-target="#amazondrawer">
+        <i class="fas fa-sliders-h"></i>
+    </button>
+
+    <div class="drawer drawer-left slide" tabindex="-1" role="dialog" aria-labelledby="drawer-demo-title"
+        aria-hidden="true" id="amazondrawer">
+        <div class="drawer-content drawer-content-scrollable" role="document">
+            <div class="drawer-header bg-dark text-white">
+                <h4 class="drawer-title mx-auto" id="drawer-demo-title"><i class="far fa-user-circle"></i> Hello,
+                    Sign in</h4>
+            </div>
+            <div class="drawer-body">
+                <h6 class="text-muted text-uppercase">Help & Settings</h6>
+                <a href="#" class="btn btn-outline-success my-2 btn-sm">Your Account</a>
+                <a href="login.html" class="btn btn-warning my-2 btn-sm">Sign in</a>
+            </div>
+            <div class="drawer-footer">
+                <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="drawer"
+                    aria-label="close">
+                    <i class="fas fa-2x fa-times"></i>
+
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Drawer ends-->
+        <a class="navbar-brand pl-3" href="#">
+            <img src="img/amzon_logo_white.png" height="30" width="100" alt="Amazon_logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!--search bar start-->
+            <form class="form-inline px-lg-5" novalidate method="get">
+                <div class="input-group">
+                    <div class="input-group-prepand">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" name="btnCategory" type="button"
+                                id="btnCategoryDropdownMenu" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                All
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="btnCategoryDropdownMenu">
+                                <a class="dropdown-item" href="#">All</a>
+                                <a class="dropdown-item" href="#">Smartphones</a>
+                                <a class="dropdown-item" href="#">Electronics</a>
+                                <a class="dropdown-item" href="#">Kichen Hardware</a>
+                                <a class="dropdown-item" href="#">Books</a>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" size="80" name="query" id="query">
+                    <input type="text" name="category" id="category" hidden>
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-warning">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <!--search bar ends-->
+            <ul class="navbar-nav">
+                <!--preferred language start-->
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link " href="#" id="prefLanguageDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-2x fa-language"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="prefLanguageDropdown">
+                        <form class="p-3">
+                            <div class="custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="prefLanguage" id="englishlang"
+                                    value="english" checked>
+                                <label class="custom-control-label" for="englishlang">
+                                    English
+                                </label>
+                            </div>
+                            <div class="dropdown-divider"></div>
+
+                            <div class="custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="prefLanguage" id="hindilang"
+                                    value="hindi" checked>
+                                <label class="custom-control-label" for="hindilang">
+                                    Hindi
+                                </label>
+                            </div>
+                            <div class="dropdown-divider"></div>
+
+                            <div class="custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="prefLanguage" id="banglalang"
+                                    value="bangla" checked>
+                                <label class="custom-control-label" for="banglalang">
+                                    Bangla
+                                </label>
+                            </div>
+                            <div class="dropdown-divider"></div>
+
+                            <div class="custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="prefLanguage" id="urdulang"
+                                    value="urdu" checked>
+                                <label class="custom-control-label" for="urdulang">
+                                    Urdu
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+                <!--preferred language ends-->
+                <!--user account start-->
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link " href="login.html" id="userAccount" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas text-success fa-2x fa-user-circle"></i>
+                    </a>
+                    <div class="dropdown-menu px-3" aria-labelledby="userAccount">
+                        <div class="d-flex flex-column justify-content-center">
+                            <a href="#" class="btn btn-warning w-75 font-weight-bold">Sign in</a>
+                            <small class="text-muted">New Customer? <a href="#">Start here.</a></small>
+                        </div>
+                    </div>
+                </li>
+                <!--user account ends-->
+                <!--Shopping carts start-->
+                <li class="nav-item px-2">
+                    <a class="nav-link" href="#" aria-disabled="true">
+                        <i class="fas fa-3x text-light fa-shopping-cart"></i>
+                        <span class="badge badge-warning badge badge-pill">0</span>
+                    </a>
+                </li>
+                <!--Shopping carts ends-->
+            </ul>
+
+        </div>
+    </nav>
+    <!--Navbar Ends-->
+
+    <div class="container my-5">
+        <!--Top page design starts-->
+        <div class="row">
+            <!--Image select starts-->
+            <div class="col-md-1">
+                <button class="btn btn-sm bg-transparent">
+                    <img src="img/Product3.png" alt=" btn-image">
+                </button>
+                <button class="btn btn-sm bg-transparent">
+                    <img src="img/Product3.png" alt=" btn-image">
+                </button>
+                <button class="btn btn-sm bg-transparent">
+                    <img src="img/Product3.png" alt=" btn-image">
+                </button>
+                <button class="btn btn-sm bg-transparent">
+                    <img src="img/Product3.png" alt=" btn-image">
+                </button>
+            </div>
+            <!--Image select ends-->
+            <!--Product Image starts-->
+            <div class="col-md-3">
+                <img src="img/Product2.png" class="img-fluid" alt="product-image">
+            </div>
+            <!--Product Image ends-->
+            <!--Product details starts-->
+            <div class="col-md-4">
+                <h6 class="font-weight-bold">RedMI 8A Dual (Sea Blue, 2GB RAM, 32GB Storage) - Dual Camera & 5, 000 mAH
+                    Battery</h6>
+                <p>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
+                </p>
+                <div class="dropdown-divider"></div>
+                <p class="mb-0">
+                    <span class="text-muted mr-1">M.R.P:</span>
+                    <span class="text-danger font-weight-bold"><i class="fas fa-rupee-sign"></i> 8000/-</span>
+                </p>
+
+                <p>
+                    <span class="text-muted mr-1">You Save:</span>
+                    <span class="text-danger font-weight-bold"><i class="fas fa-rupee-sign"></i> 4000/-</span>
+                </p>
+
+                <div class="dropdown-divider"></div>
+
+                <!--Delivery Quality Image Starts-->
+                <div class="row" style="font-size: 12px; font-weight: bold;">
+                    <div class="col-md-3">
+                        <img src="" alt="img1" width="35" height="35" class="rounded">
+                        <br />
+                        <a href="#">No Contact Delivery</a>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="" alt="img2" width="35" height="35" class="rounded">
+                        <br />
+                        <a href="#">7 Day Replacement</a>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="" alt="img3" width="35" height="35" class="rounded">
+                        <br />
+                        <a href="#">Amazon delivered</a>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="" alt="img4" width="35" height="35" class="rounded">
+                        <br />
+                        <a href="#">1 Year Warranty</a>
+                    </div>
+                </div>
+                <!--Delivery Quality Image ends-->
+
+                <div class="dropdown-divider mt-3"></div>
+
+                <p class="text-success font-weight-bold">In Stock.</p>
+                <p>sold By:
+                    <a href="#">ABC Seller</a>
+                </p>
+
+                <!--Product Description starts-->
+                <ul class="ml-n4">
+                    <li>13+2MP dual rear AI camera with PDaf | 8MP Front Camera</li>
+                    <li>15.7988 centimeters (6.22-inches) HD + Dot notch display with 1520*720 pixels resolution and
+                        19.9 aspect rati | 2.50 curved glass.</li>
+                    <li>Memory, Storage & Sim: 2GB | 32GB internal memory expandable upto 512 GB with dedicated card
+                        slot | Dual SIM (nano+nano) dual standby (4G + 4G)</li>
+                    <li>Android Pie v9.0 operating system with 1.95GHz Snapdragon 439 octa core processor</li>
+                    <li>5000mAH lithium-polymer battery</li>
+                    <li>Box also includes: Power adapter, USB cable. SIM eject tool warranty card and user guide. The
+                        box does not includes earphones.</li>
+                </ul>
+                <!--Product Description ends-->
+            </div>
+            <!--Product details ends-->
+            <!--Add product Card starts-->
+            <div class="col-md-4 text-center">
+                <!--Card starts-->
+                <div class="card shadow rounded float-md-right">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="quantity">Quantity: </label>
+                            <select class="form-control form-control-sm d-inline ml-2" style="width: 50px;"
+                                id="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                        <p class="mb-0">
+                            <span class="text-muted mr-1">M.R.P:</span>
+                            <span class="text-danger font-weight-bold"><i class="fas fa-rupee-sign"></i> 8000/-</span>
+                        </p>
+
+                        <a href="#" class="btn btn-warning btn-sm btn-block mt-3">
+                            <i class="fas fa-cart-plus float-left text-primary" style="font-size: 25px;"></i>
+                            Add to cart
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a href="#">
+                            <i class="fas fa-map-marker-alt text-dark"></i>
+                            Select Delivery Location</a>
+
+
+                    </div>
+                </div>
+                <!--Card ends-->
+
+            </div>
+            <!--Add product Card ends-->
+        </div>
+        <!--Top page design ends-->
+
+        <div class="row border-bottom border-top">
+            <div class="col-md-12">
+                <p class="text-info font-weight-bold">Save Extra with 5 Offers</p>
+                <ul class="ml-n4">
+                    <li><span class="text-danger">No Cost EMI:</span> Avail No cost EMI on select cards for orders above
+                        Rs3000.</li>
+                    <li><span class="text-danger">Exchange Offers:</span> Enter your pin code to view exchange offer.
+                    </li>
+                    <li><span class="text-danger">Cashback (2):</span> 5% back with Amazon Pay UPI for prime members and
+                        3% back for everybody else.</li>
+                    <li><span class="text-danger">Bank Offer:</span> Get 5% upto Rs 1500 Instant Discount on Bank of
+                        Baroda Credit card EMI transactions.</li>
+                    <li><span class="text-danger">Partner Offers:</span> Buy Now & pay next month at 0% intrest or pay
+                        in EMI with Amazon Pay Later. Instant
+                        credit upto Rs 20,000. Check eligibility.<a href="#"> click Now</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row border-bottom mt-3">
+            <div class="col-md-12 my-3">
+                <h6 class="text-info font-weight-bold">Product Description</h6>
+                <p>Color: Sea Blue | Size name: 32GB Take strinkly clear photos with the 13MP + 2MP AI dual camera.
+                    Capture
+                    the beauty of any scene while the AI-powered portrait mode with beautify blurs the background to
+                    create
+                    portraits that stand out. The octa-core processor takes operational efficiency to the next level
+                    which
+                    results in brilliant results </p>
+            </div>
+        </div>
+
+
+        <!--Customer Reviews starts-->
+        <div class="row my-5">
+            <div class="col-md-4">
+                <p class="text-capitalize font-weight-bold">Avg. Customer Review</p>
+                <button class="btn btn-sm btn-bg-transparent">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <span class="btn-rating"> & Up</span>
+                </button>
+                <br />
+
+                <button class="btn btn-sm btn-bg-transparent">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
+                    <span class="btn-rating"> & Up</span>
+                </button>
+                <br />
+
+                <button class="btn btn-sm btn-bg-transparent">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
+                    <span class="btn-rating"> & Up</span>
+                </button>
+                <br />
+
+                <button class="btn btn-sm btn-bg-transparent">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
+                    <span class="btn-rating"> & Up</span>
+                </button>
+                <br />
+
+                <button class="btn btn-sm btn-bg-transparent">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
+                    <span class="btn-rating"> & Up</span>
+                </button>
+                <br />
+            </div>
+            <div class="col-md-8">
+                <p class="text-capitalize font-weight-bold">Top Reviews From India</p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="#" class="text-dark" style="text-decoration: none;"><img src="img/empty_avatar.png"
+                                width="34" height="34" class="rounded-circle mr-2"> Narendar Modi</a>
+                        <p class="font-weight-bold mt-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                            <i class="far fa-star text-warning mr-2"></i>
+
+                            Learning Selling From Me
+                        </p>
+                        <p>Color: Sea Blue | Size name: 32GB Take strinkly clear photos with the 13MP + 2MP AI dual camera.
+                            Capture
+                            the beauty of any scene while the AI-powered portrait mode with beautify blurs the background to
+                            create
+                            portraits that stand out. The octa-core processor takes operational efficiency to the next level
+                            which
+                            results in brilliant results</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="#" class="text-dark" style="text-decoration: none;"><img src="img/empty_avatar.png"
+                                width="34" height="34" class="rounded-circle mr-2"> Narendar Modi</a>
+                        <p class="font-weight-bold mt-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                            <i class="far fa-star text-warning mr-2"></i>
+
+                            Learning Selling From Me
+                        </p>
+                        <p>Color: Sea Blue | Size name: 32GB Take strinkly clear photos with the 13MP + 2MP AI dual camera.
+                            Capture
+                            the beauty of any scene while the AI-powered portrait mode with beautify blurs the background to
+                            create
+                            portraits that stand out. The octa-core processor takes operational efficiency to the next level
+                            which
+                            results in brilliant results</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="#" class="text-dark" style="text-decoration: none;"><img src="img/empty_avatar.png"
+                                width="34" height="34" class="rounded-circle mr-2"> Narendar Modi</a>
+                        <p class="font-weight-bold mt-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                            <i class="far fa-star text-warning mr-2"></i>
+
+                            Learning Selling From Me
+                        </p>
+                        <p>Color: Sea Blue | Size name: 32GB Take strinkly clear photos with the 13MP + 2MP AI dual camera.
+                            Capture
+                            the beauty of any scene while the AI-powered portrait mode with beautify blurs the background to
+                            create
+                            portraits that stand out. The octa-core processor takes operational efficiency to the next level
+                            which
+                            results in brilliant results</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="#" class="text-dark" style="text-decoration: none;"><img src="img/empty_avatar.png"
+                                width="34" height="34" class="rounded-circle mr-2"> Narendar Modi</a>
+                        <p class="font-weight-bold mt-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                            <i class="far fa-star text-warning mr-2"></i>
+
+                            Learning Selling From Me
+                        </p>
+                        <p>Color: Sea Blue | Size name: 32GB Take strinkly clear photos with the 13MP + 2MP AI dual camera.
+                            Capture
+                            the beauty of any scene while the AI-powered portrait mode with beautify blurs the background to
+                            create
+                            portraits that stand out. The octa-core processor takes operational efficiency to the next level
+                            which
+                            results in brilliant results</p>
+                    </div>
+                </div>
+
+                <div class="dropdown-divider mt-3"></div>
+                <a href="#" class="font-weight-bold">See all reviews  <i class="fas fa-caret-right"></i></a>
+            </div>
+        </div>
+        <!--Customer Reviews ends-->
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!--Drawer js file-->
+    <script src="js/bootstrap-drawer.min.js"></script>
+    <!--Custom javascript-->
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

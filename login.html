@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <!--Amazon Favicon-->
+  <link rel="icon" href="img/amazon_favicon.ico" image="image/gif" size="16x16">
+
+
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+  <!--font awesome css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--Bootsrap css local-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!--Drawer css file-->
+  <link rel="stylesheet" href="css/bootstrap-drawer.min.css">
+
+  <!--Custom css-->
+  <link rel="stylesheet" href="css/custom.css">
+  <title>Amazon : Login</title>
+</head>
+
+<body>
+  <!--Navbar start-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!--Drawer start-->
+    <button class="btn btn-outline-light" data-toggle="drawer" data-target="#amazondrawer">
+      <i class="fas fa-sliders-h"></i>
+  </button>
+
+  <div class="drawer drawer-left slide" tabindex="-1" role="dialog" aria-labelledby="drawer-demo-title"
+      aria-hidden="true" id="amazondrawer">
+      <div class="drawer-content drawer-content-scrollable" role="document">
+          <div class="drawer-header bg-dark text-white">
+              <h4 class="drawer-title mx-auto" id="drawer-demo-title"><i class="far fa-user-circle"></i> Hello,
+                  Sign in</h4>
+          </div>
+          <div class="drawer-body">
+              <h6 class="text-muted text-uppercase">Help & Settings</h6>
+              <a href="#" class="btn btn-outline-success my-2 btn-sm">Your Account</a>
+              <a href="login.html" class="btn btn-warning my-2 btn-sm">Sign in</a>
+          </div>
+          <div class="drawer-footer">
+              <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="drawer"
+                  aria-label="close">
+                  <i class="fas fa-2x fa-times"></i>
+
+              </button>
+          </div>
+      </div>
+  </div>
+  <!--Drawer ends-->
+   
+    <a class="navbar-brand pl-3" href="#">
+      <img src="img/amzon_logo_white.png" height="30" width="100" alt="Amazon_logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!--search bar start-->
+      <form class="form-inline px-lg-5" novalidate method="get">
+        <div class="input-group">
+          <div class="input-group-prepand">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" name="btnCategory" type="button"
+                id="btnCategoryDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All
+              </button>
+              <div class="dropdown-menu" aria-labelledby="btnCategoryDropdownMenu">
+                <a class="dropdown-item" href="#">All</a>
+                <a class="dropdown-item" href="#">Smartphones</a>
+                <a class="dropdown-item" href="#">Electronics</a>
+                <a class="dropdown-item" href="#">Kichen Hardware</a>
+                <a class="dropdown-item" href="#">Books</a>
+              </div>
+            </div>
+          </div>
+          <input type="text" class="form-control" size="80" name="query" id="query">
+          <input type="text" name="category" id="category" hidden>
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-warning">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+      <!--search bar ends-->
+      <ul class="navbar-nav">
+        <!--preferred language start-->
+        <li class="nav-item dropdown px-2">
+          <a class="nav-link " href="#" id="prefLanguageDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-2x fa-language"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="prefLanguageDropdown">
+            <form class="p-3">
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" name="prefLanguage" id="englishlang" value="english"
+                  checked>
+                <label class="custom-control-label" for="englishlang">
+                  English
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" name="prefLanguage" id="hindilang" value="hindi"
+                  checked>
+                <label class="custom-control-label" for="hindilang">
+                  Hindi
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" name="prefLanguage" id="banglalang" value="bangla"
+                  checked>
+                <label class="custom-control-label" for="banglalang">
+                  Bangla
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" name="prefLanguage" id="urdulang" value="urdu" checked>
+                <label class="custom-control-label" for="urdulang">
+                  Urdu
+                </label>
+              </div>
+            </form>
+          </div>
+        </li>
+        <!--preferred language ends-->
+        <!--user account start-->
+        <li class="nav-item dropdown px-2">
+          <a class="nav-link " href="login.html" id="userAccount" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas text-success fa-2x fa-user-circle"></i>
+          </a>
+          <div class="dropdown-menu px-3" aria-labelledby="userAccount">
+            <div class="d-flex flex-column justify-content-center">
+              <a href="#" class="btn btn-warning w-75 font-weight-bold">Sign in</a>
+              <small class="text-muted">New Customer? <a href="#">Start here.</a></small>
+            </div>
+          </div>
+        </li>
+        <!--user account ends-->
+        <!--Shopping carts start-->
+        <li class="nav-item px-2">
+          <a class="nav-link" href="#" aria-disabled="true">
+            <i class="fas fa-3x text-light fa-shopping-cart"></i>
+            <span class="badge badge-warning badge badge-pill">0</span>
+          </a>
+        </li>
+        <!--Shopping carts ends-->
+      </ul>
+
+    </div>
+  </nav>
+  <!--Navbar Ends-->
+  <!--login Card form starts-->
+  <div class="container mb-5">
+    <div class="card mx-auto mt-5 pb-3 shadow rounded" style="width: 25rem;">
+      <div class="card-body">
+        <h4 class="card-title">Login</h4>
+        <!--login form starts-->
+        <form class="needs-validation" autocomplete="off" method="post" action="#" novalidate>
+          <div class="form-group">
+            <label for="userEmail">Email: </label>
+            <input type="email" name="email" class="form-control" placeholder="abc@gmail.com" id="userEmail"
+              aria-describedby="emailHelp" required>
+            <small id="emailHelp" class="form-text text-muted"><i class="fas text-primary fa-info"></i> We'll never share your email with anyone else.</small>
+            <div class="valid-feedback">
+              <i class="fas text-success fa-thumbs-up"></i> OK
+            </div>
+            <div class="invalid-feedback">
+              <i class="fas text-danger fa-exclamation-triangle"></i> Some error in email.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="userPassword">Password: </label>
+            <input type="password" class="form-control" name="password" placeholder="******" id="userPassword"
+              aria-describedby="passwordHelp" required minlength="6">
+            <small id="passwordHelp" class="form-text text-muted"><i class="fas text-primary fa-info"></i> Password must be atleast 6 character.</small>
+            <div class="valid-feedback">
+              <i class="fas text-success fa-thumbs-up"></i> OK
+            </div>
+            <div class="invalid-feedback">
+              <i class="fas text-danger fa-exclamation-triangle"></i> Some error in password.
+            </div>
+          </div>
+          <button type="submit" class="btn btn-warning w-100 shadow rounded">Sign in</button>
+        </form>
+        <!--Login form ends-->
+
+        <!--OR Seperator-->
+        <hr class="hr-text" data-content="New to Amazon?">
+
+        <!--Create Account button-->
+        <a href="register.html" class="btn btn-sm btn-dark w-100 mt-2">Create your Amazon account</a>
+        <a href="#" class="btn btn-outline-success btn-sm w-100 mt-2"><i class="fab fa-google"></i> Sign in with
+          Google</a>
+
+        <a href="#" class="btn btn-outline-primary btn-sm w-100 mt-2"><i class="fab fa-facebook-square"></i> Sign in
+          with Facebook</a>
+      </div>
+    </div>
+  </div>
+  <!--login Card form starts-->
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!--Drawer js file-->
+  <script src="js/bootstrap-drawer.min.js"></script>
+  <!--Custom javascript-->
+  <script src="js/custom.js"></script>
+
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
+</body>
+
+</html>
